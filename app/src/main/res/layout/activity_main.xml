@@ -14,24 +14,10 @@
         android:layout_height="100dp"
         android:layout_marginTop="112dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <!-- Botón Ingresar -->
-    <Button
-        android:id="@+id/btnIngresar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#1E297D"
-        android:text="Ingresar"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardView" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="Logo de la aplicación" />
 
 
     <!-- Ingreso de Estibas Texto -->
@@ -39,12 +25,11 @@
         android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:text="Ingreso de Estibas"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcomeText" />
 
@@ -53,12 +38,11 @@
         android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="40dp"
         android:layout_marginTop="16dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subtitleText">
 
@@ -66,7 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:layout_marginTop="0dp">
 
             <!-- Campo DNI -->
             <TextView
@@ -82,7 +67,8 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#CCCCCC"
                 android:hint="PlaceHolder"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="#000000"/>
 
             <!-- Mensaje de error -->
             <TextView
@@ -108,7 +94,8 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#CCCCCC"
                 android:hint="PlaceHolder"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="#000000" />
 
             <!-- Mensaje de error -->
             <TextView
@@ -129,6 +116,15 @@
                 android:textColor="#1E297D"
                 android:textStyle="bold" />
 
+            <!-- Botón Ingresar -->
+            <Button
+                android:id="@+id/btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#1E297D"
+                android:text="Ingresar"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -143,7 +139,6 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
 

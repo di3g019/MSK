@@ -25,7 +25,6 @@
                 android:src="@drawable/ic_menu"
                 android:contentDescription="Icono de menú" />
 
-
             <ImageView
                 android:id="@+id/logo_icon"
                 android:layout_width="640dp"
@@ -62,8 +61,6 @@
             android:padding="8dp" />
 
         <!-- Botones adicionales -->
-
-        <!-- Título de programaciones -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,7 +79,6 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp" />
 
-
             <Button
                 android:id="@+id/btn_calculation"
                 android:layout_width="wrap_content"
@@ -99,20 +95,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="horizontal"
-            android:gravity="space_between">
+            android:weightSum="2">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Tus programaciones:"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Ver todos"
+                android:gravity="end"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -129,76 +128,84 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:background="@drawable/card_background"
                 android:padding="12dp"
                 android:layout_marginBottom="8dp">
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/card_day_background"
-                    android:gravity="center"
-                    android:text="LUN"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:padding="4dp" />
-
+                <!-- Contenido de la tarjeta -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="8dp">
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cuenta: Almacenes BSF"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/card_day_background"
+                        android:gravity="center"
+                        android:text="LUN"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:padding="4dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lugar: Villa el Salvador"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hora Inicio: 8:00"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cuenta: Almacenes BSF"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hora Fin: 16:00"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lugar: Villa el Salvador"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ver más"
-                        android:textColor="#001B78"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hora Inicio: 8:00"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hora Fin: 16:00"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ver más"
+                            android:textColor="#001B78"
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <!-- Botón nueva programación -->
+                <Button
+                    android:id="@+id/btn_new_program"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_rounded_blue"
+                    android:text="Nueva Programación"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="8dp" />
             </LinearLayout>
         </LinearLayout>
-
-        <!-- Botón nueva programación -->
-        <Button
-            android:id="@+id/btn_new_program"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/btn_rounded_blue"
-            android:text="Nueva Programación"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:padding="8dp" />
     </LinearLayout>
 </ScrollView>
+
 
