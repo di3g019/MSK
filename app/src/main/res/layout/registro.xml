@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E297D">
+
+    <!-- Título de la pantalla -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SERVICIO"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Sección de Programación -->
+    <TextView
+        android:id="@+id/tvProgramacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Programación:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Dropdown de Programación -->
+    <Spinner
+        android:id="@+id/spinnerProgramacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvProgramacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Hora de llegada -->
+    <TextView
+        android:id="@+id/tvHoraLlegada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hora de llegada:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerProgramacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Campo de hora de llegada -->
+    <EditText
+        android:id="@+id/etHoraLlegada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese hora"
+        android:backgroundTint="#CCCCCC"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/tvHoraLlegada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Ubicación -->
+    <TextView
+        android:id="@+id/tvUbicacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ubicación:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/etHoraLlegada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Campo de ubicación -->
+    <EditText
+        android:id="@+id/etUbicacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="En el punto: (SI/NO)"
+        android:backgroundTint="#CCCCCC"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/tvUbicacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Foto de la cuadrilla (Texto en lugar de imagen) -->
+    <TextView
+        android:id="@+id/tvFotoCuadrilla"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Foto de la Cuadrilla:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/etUbicacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Texto de mensaje -->
+    <TextView
+        android:id="@+id/tvEpps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="¡EPPS COMPLETOS!"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvFotoCuadrilla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Mensaje sobre la foto -->
+    <TextView
+        android:id="@+id/tvMensajeFoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Recuerda que la foto es enviada a los clientes y es necesario que el personal se presente con los EPPS completos."
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvEpps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Botón Eliminar -->
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:backgroundTint="#FF0000"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/tvMensajeFoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Botón Foto -->
+    <Button
+        android:id="@+id/btnFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto"
+        android:backgroundTint="#00FF00"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnEliminar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Botón Conservar -->
+    <Button
+        android:id="@+id/btnConservar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conservar"
+        android:backgroundTint="#007A3D"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnFoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Botón Registrar -->
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:backgroundTint="#1E297D"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnConservar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
