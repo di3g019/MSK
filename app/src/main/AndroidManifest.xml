@@ -15,7 +15,7 @@
 
         <!-- MainActivity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".view.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
 
         <!-- MenuActivity -->
         <activity
-            android:name=".MenuActivity"
+            android:name=".view.activities.MenuActivity"
             android:exported="true" />
     </application>
 
